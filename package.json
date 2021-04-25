@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "jshint"
+    "test": "jshint src/index.js"
   },
   "author": "bureibuLi",
   "license": "MIT",
