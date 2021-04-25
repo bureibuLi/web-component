@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'TestFont1';
+  src: url('../asset/Kiss Boom.woff') format('woff');
+}
+@font-face {
+  font-family: 'TestFont2';
+  src: url('../asset/Kiss Boom Italic.woff') format('woff');
+}
+.hello {
+  color: red;
+}
+.font1{
+  font-family: 'TestFont1', serif;
+  font-size: xx-large;
+}
+.font2{
+  font-family: 'TestFont2', serif;
+  font-size: xx-large;
+}
