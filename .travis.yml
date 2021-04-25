@@ -1,0 +1,8 @@
+# running on container-based infrastructure
+sudo: false
+
+addons:
+  sonarqube: true
+script:
+  - sonar-scanner -Dsonar.qualitygate.wait=true -D"sonar.projectKey=sonarqube_postgre" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.sourceEncoding=UTF-8" -D"sonar.login=8c6b15b4cd0df34502d722f649509d8b4c16a3ef"
+
