@@ -2,6 +2,9 @@ import './style.css';
 import TestImage from '../asset/image.jpg';
 import PrintHelloWorld from './print';
 
+/**
+ * @return {HTMLDivElement}
+ */
 function component() {
   const element = document.createElement('div');
 
@@ -33,7 +36,6 @@ function component() {
   myImage.src = TestImage;
   myImage.height = 100;
   element.appendChild(myImage);
-
   return element;
 }
 

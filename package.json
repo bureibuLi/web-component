@@ -2,22 +2,26 @@
   "name": "web-component",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {},
+  "dependencies": {
+  },
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "jshint src/index.js"
+    "test": "eslint src/index.js"
   },
   "author": "bureibuLi",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^5.2.4",
+    "eslint": "^7.25.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-webpack-plugin": "^2.5.4",
     "express": "^4.17.1",
     "html-webpack-plugin": "^5.3.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.35.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
-    "jshint": "^2.8.0"
+    "webpackbar": "^5.0.0-3"
   }
 }
