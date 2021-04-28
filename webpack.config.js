@@ -6,29 +6,29 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
   },
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname,'./public/index.html'),
+      template: path.join(__dirname, './public/index.html'),
       filename: 'index.html',
       favicon: path.resolve('./public/favicon.ico'),
-      title: "WEB COMPONENT"
+      title: 'WEB COMPONENT',
     }),
     new WebpackBar({
-      color:'green',
-      name:'webpack component',
+      color: 'green',
+      name: 'webpack component',
       reporters: ['fancy'],
       reporter: {
-        progress({ state }) {
-          if ( state.progress === 0) {
+        progress({state}) {
+          if (state.progress === 100) {
             process.stderr.write('http://localhost:3000 \n');
           }
         },
       },
     }),
-    new ESLintPlugin()
+    new ESLintPlugin(),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -38,7 +38,7 @@ module.exports = {
     stats: {
       errors: true,
       warnings: true,
-    }
+    },
   },
   output: {
     filename: '[name].bundle.js',
@@ -59,5 +59,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  }
+  },
 };
