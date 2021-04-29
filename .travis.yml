@@ -1,3 +1,16 @@
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+env:
+  - NODE_ENV=production
 language: node_js
 node_js:
-  - "node"
+  - 15
+  - 14
+  - "stable"
+install:
+  - yarn install
+  - yarn add eslint-config-google
+script:
+  - yarn lint
