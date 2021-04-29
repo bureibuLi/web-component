@@ -11,5 +11,6 @@ node_js:
   - "stable"
 install:
   - yarn install
+  - yarn add eslint-config-google
 script:
   - yarn lint
