@@ -11,7 +11,7 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "eslint src/index.js"
+    "lint": "eslint src/index.js"
   },
   "author": "bureibuLi",
   "license": "MIT",
