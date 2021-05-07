@@ -1,19 +1,10 @@
-class MyElement extends HTMLElement {
-  constructor() {
-    super();
+import render from './Render';
 
-    this.shadowRoot.innerHTML = `
-      <style>
-        /* scoped styles */
-      </style>
-      <slot></slot>
-    `;
-  }
-}
+render('app-element', `app`);
 
 /**
  * 装载App组件
  */
 const element = document.getElementById('root');
-const App = document.createElement('App');
+const App = document.createElement('app-element');
 element.appendChild(App);
