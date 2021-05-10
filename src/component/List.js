@@ -1,12 +1,33 @@
+import image from '../../asset/logo1.png';
 /**
  * 创建template，以加载html dom、css style、script
  */
 const template = document.createElement('template');
 template.innerHTML = `
-  <ul/>
+  <ul>
+    <img src=${image} alt="image" width="100%" style="margin-bottom: 20px"/>
+  </ul>
   <style>
-    ul li{
+    ul{
+      padding: 0;
+      margin: 0;
+    }
+    .nav-li{
       list-style: none;
+      height: 60px;
+      font-size: 25px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      transition:background-color 1s;
+      -moz-transition:background-color 1s; /* Firefox 4 */
+      -webkit-transition:background-color 1s; /* Safari and Chrome */
+      -o-transition:background-color 1s; /* Opera */
+      color: white;
+    }
+    .nav-li:hover{
+      background-color: white;
+      color: black;
     }
   </style>
 `;
@@ -34,7 +55,7 @@ class Base extends HTMLElement {
   }
   /**
    * setter hook, 修改option时会自动调用此方法
-   * @param {any} value
+   * @param {Array} value
    */
   set option(value) {
     this.setAttribute('option', value);
@@ -63,6 +84,7 @@ class Base extends HTMLElement {
       option.forEach((item)=>{
         const li = document.createElement('li');
         li.innerHTML = item;
+        li.className = 'nav-li';
         this.$ul.appendChild(li);
       });
     }

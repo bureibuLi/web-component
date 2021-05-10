@@ -4,7 +4,7 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <div class="container">
-    <list-element style="width: 20%;height: 100%;" option='[ "Home", "Component", "Help" ]'/>
+    <list-element style="" class="list-container" option='[ "Home", "Component", "Help" ]'/>
   </div>
   <style>
     .container{
@@ -13,6 +13,12 @@ template.innerHTML = `
       align-items: flex-start;
       width: 100vw;
       height: 100vh;
+    }
+    .list-container{
+      width: 20%;
+      height: 100%;
+      border-right: white 4px solid;
+      background: black;
     }
   </style>
 `;
