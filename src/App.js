@@ -1,4 +1,23 @@
 /**
+ * 创建template，以加载html dom、css style、script
+ */
+const template = document.createElement('template');
+template.innerHTML = `
+  <div class="container">
+    <list-element style="width: 20%;height: 100%;" option='[ "Home", "Component", "Help" ]'/>
+  </div>
+  <style>
+    .container{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+`;
+
+/**
  * @class Base
  * @extends HTMLElement
  */
@@ -8,8 +27,8 @@ class Base extends HTMLElement {
    */
   constructor() {
     super();
-    this.attachShadow({mode: 'open'});
-    this.shadowRoot.innerHTML = '<list-element/>';
+    this._shadowRoot = this.attachShadow({mode: 'open'});
+    this._shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
 
