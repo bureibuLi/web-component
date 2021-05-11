@@ -1,3 +1,5 @@
+import './component/List';
+
 /**
  * 创建template，以加载html dom、css style、script
  */

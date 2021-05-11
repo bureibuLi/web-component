@@ -7,7 +7,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/App.js',
-    list: './src/component/List.js',
   },
   devtool: 'source-map',
   plugins: [
