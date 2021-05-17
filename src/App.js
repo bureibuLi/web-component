@@ -1,4 +1,4 @@
-import './component/List';
+import './component/Navbar';
 
 /**
  * 创建template，以加载html dom、css style、script
@@ -6,19 +6,17 @@ import './component/List';
 const template = document.createElement('template');
 template.innerHTML = `
   <div class="container">
-    <list-element style="" class="list-container" option='[ "Home", "Component", "Help" ]'/>
+    <navbar-left style="" class="list-container" option='[ "Home", "Component", "Help" ]'/>
   </div>
   <style>
     .container{
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      width: 100vw;
-      height: 100vh;
     }
     .list-container{
       width: 20%;
-      height: 100%;
+      min-height: 100vh;
       border-right: white 4px solid;
       background: black;
     }

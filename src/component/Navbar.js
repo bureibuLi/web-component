@@ -90,6 +90,6 @@ class Base extends HTMLElement {
     }
   }
 }
-customElements.define('list-element', Base);
+customElements.define('navbar-left', Base);
 
 
